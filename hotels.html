@@ -3,9 +3,6 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=latin,cyrillic">
-    <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="main-header">
@@ -22,106 +19,145 @@
       </nav>
     </header>
     <main class="container">
-      <section class="welcome">
-        <h1 class="visually-hidden">Седона</h1>
-        <img src="img/welcome.svg" width="459" height="353" alt="Добро пожаловать в Седону">
+      <section class="filters">
+        <h2 class="visually-hidden">Поисковый фильтр</h2>
+        <fieldset class="infrastructure">
+          <legend>Инфраструктура:</legend>
+          <ul>
+            <li>
+              <input type="checkbox" name="pool" checked>
+              <label id="pool">Бассейн</label>
+            </li>
+            <li>
+              <input type="checkbox" name="parking">
+              <label id="parking">Парковка</label>
+            </li>
+            <li>
+              <input type="checkbox" name="wi-fi">
+              <label id="wi-fi">Wi-Fi</label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="living">
+          <legend>Тип жилья:</legend>
+          <ul>
+            <li>
+              <input type="checkbox" name="hotel" checked>
+              <label id="hotel">Гостиница</label>
+            </li>
+            <li>
+              <input type="checkbox" name="motel" checked>
+              <label id="motel">Мотель</label>
+            </li>
+            <li>
+              <input type="checkbox" name="apartments" checked>
+              <label id="appartments">Апартаменты</label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="price">
+          <legend>Стоимость в сутки (р):</legend>
+          <div class="min-max-price">
+            <label id="minimum">От 0</label>
+            <label id="maximum">До 3000</label>
+            <br>
+            <input type="range" id="a" name="a" value="80">
+            <br>
+            <input type="submit" value="Показать">
+          </div>
+        </fieldset>
       </section>
-      <section class="main-title">
-        <h2>Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
-        <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
-      </section>
-      <section class="visit-reasons">
-        <ul class="reasons">
-          <li class="content-reason">
-            <h3>Настоящий городок</h3>
-            <p class="priority">— №1 —</p>
-            <p class="reason-text">Седона — не  аттракцион для туристов, там течёт своя жизнь</p>
-          </li>
-          <li class="landscape img-city">
-            <img src="img/photo-1.jpg" width="800" height="400" alt="Пейзаж города Седона">
-          </li>
-          <li class="content-reason">
-            <p>
-              <img src="img/icon-1.png" aria-hidden="true" alt=""><!--temporary .png file, will be replaced with .svg in p tag (style.css)-->
-            </p>
-            <h3>Жилье</h3>
-            <p class="reason-text">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
-          </li>
-          <li class="content-reason">
-            <p>
-              <img src="img/icon-2.png" aria-hidden="true" alt=""><!--temporary .png file, will be replaced with .svg in p tag (style.css)-->
-            </p>
-            <h3>Еда</h3>
-            <p class="reason-text">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
-          </li>
-          <li class="content-reason">
-            <p>
-              <img src="img/icon-3.png" aria-hidden="true" alt=""><!--temporary .png file, will be replaced with .svg in p tag (style.css)-->
-            </p>
-            <h3>Сувениры</h3>
-            <p class="reason-text">Не только китайского, но и местного производства!</p>
-          </li>
-          <li class="landscape img-nature">
-            <img src="img/photo-2.jpg" width="800" height="400" alt="Горный ланшафт и мост дьявола">
-          </li>
-          <li class="content-reason">
-            <h3>Там есть Мост дьявола</h3>
-            <p class="priority">— №2 —</p>
-            <p class="reason-text">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
-          <li>
-          <li class="content-reason">
-            <h3>Небольшая площадь</h3>
-            <p class="priority">— №3 —</p>
-            <p class="reason-text">Все достопримечательности находятся очень близко</p>
-          </li>
-          <li class="content-reason">
-            <h3>Красивая дорога</h3>
-            <p class="priority">— №4 —</p>
-            <p class="reason-text">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
-          </li>
-          <li class="content-reason">
-            <h3>Мало туристов</h3>
-            <p class="priority">— №5 —</p>
-            <p class="reason-text">Большинство едет в гранд каньон и толпится там</p>
-          </li>
+      <section class="breadcrumbs">
+        <h2 class="visually-hidden">Результат поиска гостиниц</h2>
+        <b>Найдено: 3</b>
+        <span>Сортировка</span>
+        <ul class="breadcrumbs">
+          <li><a href="#">По цене</a></li>
+          <li><a href="#">По типу</a></li>
+          <li><a href="#">По рейтингу</a></li>
         </ul>
+        <div class="arrows">
+          <a class="top" href="#">▲</a>
+          <a class="bottom" href="#">▼</a>
+        </div>
       </section>
-      <section>
-        <h4 class="interest">Заинтересовались?</h4>
-        <p class="enter-date">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-        <div class="form-and-map">
-          <a class="search" href="#">Поиск гостиницы в Седоне</a>
-          <div class="form">
-            <form class="search-hotel" action="#" method="get">
-              <label id="check-in">Дата заезда:</label>
-              <input class="date-begin" type="text" id="start-trip" placeholder="24 апреля 2017">
-              <div class="calendar"></div>
-              <br>
-              <br>
-              <label id="check-out">Дата выезда:</label>
-              <input class="date-finish" type="text" id="end-trip" placeholder="4 июля 2017">
-              <br>
-              <br>
-              <div class="clients-number">
-                <label id="adults">Взрослые:</label>
-                <div class="quantity">
-                  <div class="minus">-</div>
-                    <input type="text" name="adults" placeholder="2">
-                  <div class="plus">+</div>
-                </div>
-                <label id="children" >Дети:</label>
-                <div class="quantity">
-                  <div class="minus">-</div>
-                  <input type="text" name="children" placeholder="0">
-                  <div class="plus">+</div>
-                </div>
-              </div>
-              <input type="submit" value="Найти">
-            </form>
-          </div>
-          <div class="map-block">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d497361.62687083246!2d-111.75473650468953!3d35.02125089098163!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1472244948667" width="768" height="467" frameborder="0" style="border:0" allowfullscreen=""></iframe>
-          </div>
+      <section class="hotel-searching">
+        <h2 class="visually-hidden">Все гостиницы</h2>
+        <div class="hotel-results">
+          <img class="hotel-photo" src="img/photo-hotel-1.jpg" width="135" height="90" alt="Гостиница и СПА Амара">
+          <a class="hotel" href="#">
+            <h3>Amara Resort & SPA</h3>
+          </a>
+          <p class="name-and-price">
+            <span>Гостиница</span>
+            <span>От 3500 р.</span>
+          </p>
+          <a class="more-info" href="#">Подробнее</a>
+          <a class="booking" href="#">Забронировать</a>
+          </p>
+          <form>
+            <fieldset>
+              <span class="star-cb-group">
+                <input type="radio" id="rating-5" name="rating" value="5" /><label for="rating-5">5</label>
+                <input type="radio" id="rating-4" name="rating" value="4" checked="checked" /><label for="rating-4">4</label>
+                <input type="radio" id="rating-3" name="rating" value="3" /><label for="rating-3">3</label>
+                <input type="radio" id="rating-2" name="rating" value="2" /><label for="rating-2">2</label>
+                <input type="radio" id="rating-1" name="rating" value="1" /><label for="rating-1">1</label>
+                <input type="radio" id="rating-0" name="rating" value="0" class="star-cb-clear" /><label for="rating-0">0</label>
+              </span>
+            </fieldset>
+          </form>
+          <p class="rating">Рейтинг: 8,5</p>
+        </div>
+        <div class="hotel-results">
+          <img class="hotel-photo" src="img/photo-hotel-2.jpg" width="135" height="90" alt="Гостиница и СПА Амара">
+          <a class="hotel" href="#">
+            <h3>Desert Quail Inn</h3>
+          </a>
+          <p class="name-and-price">
+            <span>Мотель</span>
+            <span>От 2000 р.</span>
+          </p>
+          <a class="more-info" href="#">Подробнее</a>
+          <a class="booking" href="#">Забронировать</a>
+          <form>
+            <fieldset>
+              <span class="star-cb-group">
+                <input type="radio" id="rating-5" name="rating" value="5" /><label for="rating-5">5</label>
+                <input type="radio" id="rating-4" name="rating" value="4" /><label for="rating-4">4</label>
+                <input type="radio" id="rating-3" name="rating" value="3" checked="checked" /><label for="rating-3">3</label>
+                <input type="radio" id="rating-2" name="rating" value="2" /><label for="rating-2">2</label>
+                <input type="radio" id="rating-1" name="rating" value="1" /><label for="rating-1">1</label>
+                <input type="radio" id="rating-0" name="rating" value="0" class="star-cb-clear" /><label for="rating-0">0</label>
+              </span>
+            </fieldset>
+          </form>
+          <p class="rating">Рейтинг: 8,9</p>
+        </div>
+        <div class="hotel-results">
+          <img class="hotel-photo" src="img/photo-hotel-3.jpg" width="135" height="90" alt="Гостиница и СПА Амара">
+          <a class="hotel" href="#">
+            <h3>Villas at Poco Diablo</h3>
+          </a>
+          <p class="name-and-price">
+            <span>Апартаменты</span>
+            <span>От 4000 р.</span>
+          </p>
+          <a class="more-info" href="#">Подробнее</a>
+          <a class="booking" href="#">Забронировать</a>
+          <form>
+            <fieldset>
+              <span class="star-cb-group">
+                <input type="radio" id="rating-5" name="rating" value="5" /><label for="rating-5">5</label>
+                <input type="radio" id="rating-4" name="rating" value="4" /><label for="rating-4">4</label>
+                <input type="radio" id="rating-3" name="rating" value="3" /><label for="rating-3">3</label>
+                <input type="radio" id="rating-2" name="rating" value="2" checked="checked" /><label for="rating-2">2</label>
+                <input type="radio" id="rating-1" name="rating" value="1" /><label for="rating-1">1</label>
+                <input type="radio" id="rating-0" name="rating" value="0" class="star-cb-clear" /><label for="rating-0">0</label>
+              </span>
+            </fieldset>
+          </form>
+          <p class="rating">Рейтинг: 9,2</p>
         </div>
       </section>
     </main>
