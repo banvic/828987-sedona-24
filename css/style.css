@@ -15,8 +15,11 @@ body {
 header,
 main,
 footer {
+  margin: 0;
   width: 1200px;
-  box-shadow: 0 0 20px rgba(219,219,219,1); /* Параметры тени */
+  box-shadow: 0 5px 20px 2px rgba(219,219,219,1);
+
+
 }
 
 .site-navigation a:hover,
@@ -61,11 +64,16 @@ a {
 
 a.main-header-logo {
   position: absolute;
+  margin: 0;
   top: 0;
-  left: 42%;
+  left: 567px;
 }
 
 h1 {
+  display: none;
+}
+
+span.visually-hidden {
   display: none;
 }
 
@@ -296,14 +304,25 @@ fieldset {
   border: none;
 }
 
+.min-max-price {
+  padding-top: 15px;
+}
+
+.min-max-price input {
+  display: flex;
+  width: 200px;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+}
+
 .min-max-price > input:a {
   width: 200px;
 }
 
 .min-max-price > input:last-child {
-  display: flex;
-  align-self: center;
-  margin-top: 20px;
+  justify-content: center;
+  margin: 0;
   padding: 10px 30px;
   background-color: transparent;
   border: 2px solid white;
@@ -331,14 +350,12 @@ fieldset ul li label {
 }
 
 fieldset ul li input {
-  display: flex;
   margin-right: 15px;
+  padding: 0;
 }
 
-.min-max-price input {
-  width: 200px;
-  font-size: 14px;
-  font-weight: 400;
+.stars > input[type="radio"] {
+  display: none;
 }
 
 footer.main-footer {
@@ -362,8 +379,96 @@ section.main-title > p {
   padding-bottom: 50px;
 }
 
-span.visually-hidden {
-  display: none;
+.breadcrumbs {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 30px 75px;
+  background-color: #fefefe;
+}
+
+.breadcrumbs > h2 {
+  font-size: 21px;
+  margin-right: 50px;
+}
+
+.breadcrumbs > p {
+  font-size: 12px;
+  margin-right: 40px;
+}
+
+ul.breadcrumbs {
+  align-items: flex-start;
+  padding: 0;
+  list-style: none;
+}
+
+ul.breadcrumbs li a {
+  font-size: 12px;
+  margin-right: 35px;
+  color: #b1b1b1;
+}
+
+section.breadcrumbs .arrows {
+  margin-left: 400px;
+}
+
+.arrows a.top:first-of-type {
+  margin-right: 10px;
+}
+
+.hotel-searching {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.hotel-results {
+  padding: 30px 0;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 75px;
+}
+
+.about-hotel {
+  padding-left: 75px;
+  display: flex;
+  align-content: flex-start;
+}
+
+.hotel-price {
+  padding-left: 30px;
+}
+
+a.hotel > h2 {
+  margin: 0;
+  color: #000000;
+}
+
+.name-and-price > span {
+  color: #666666;
+}
+
+a.more-info,
+a.booking {
+  padding: 7px 14px;
+  color: #ffffff;
+}
+
+a.more-info {
+  background-color: #81b3d2;
+}
+
+a.booking {
+  background-color: #766357;
+}
+
+fieldset > p.rating {
+  color: #666666;
+}
+
+footer {
+  margin: 0;
 }
 
 .footer-social ul {
