@@ -79,15 +79,21 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset class="price">
-            <legend>Стоимость в сутки (р):</legend>
-            <div class="min-max-price">
-              <label id="minimum">От 0</label>
-              <label id="maximum">До 3000</label>
-              <input type="range" id="a" name="a" value="80">
-              <input type="submit" value="Показать">
+          <div class="filter-range">
+            <div class="filter-range-title">Стоимость в сутки (р):</div>
+            <div class="price-controls">
+              <label class="min-price">от <input type="text" name="min-price" value="0"></label>
+              <label class="max-price">до <input type="text" name="max-price" value="3000"></label>
             </div>
-          </fieldset>
+            <div class="range-controls">
+              <div class="scale">
+                <div class="bar"></div>
+              </div>
+              <div class="range-toggle range-toggle-min"></div>
+              <div class="range-toggle range-toggle-max"></div>
+            </div>
+            <button class="btn-transparent" type="submit">Показать</button>
+          </div>
         </section>
         <section class="breadcrumbs">
           <h1 class="visually-hidden">Результат поиска гостиниц</h1>
