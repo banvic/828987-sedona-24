@@ -183,6 +183,30 @@ body {
 }
 
 /*-----------------------BOOKING-----------------------*/
+.booking-container {
+  position: relative;
+  padding-top: 50px;
+  min-height: 256px;
+}
+
+.booking-container p {
+  text-align: center;
+  line-height: 22px;
+}
+
+h3.booking {
+  color: black;
+  margin: 0px;
+  margin-bottom: 23px;
+  font-size: 30px;
+  text-align: center;
+}
+.booking-paragraph {
+  margin: 0px;
+  color: #333;
+}
+
+/*
 h3 {
   margin: 0;
   padding-top: 60px;
@@ -197,95 +221,236 @@ h3 {
   line-height: 1.5;
   text-align: center;
 }
+*/
 
 /*-----------------------MODAL-WINDOW-----------------------*/
-.search-hotel {
-  padding: 60px;
+.search-form {
+  position: absolute;
+  top: 250px;
+  margin-left: 320px;
+  width: 568px;
+  background-color: #fff;
+  z-index: 2;
 }
 
-.form-title{
-  text-align: center;
-  text-decoration: none;
+.search-form-header {
   font-size: 21px;
-}
-
-.search {
-  margin: 0;
-  padding: 35px 95px;
-  text-decoration: none;
-  color: #ffffff;
+  text-align: center;
+  line-height: 83px;
+  color: #fff;
   background-color: #766357;
+  padding-left: 2px;
+  padding-top: 1px;
 }
 
-.search:hover {
-  background-color: #604e43;
+.form-title a {
+  padding: 35px 117px;
+  font-size: 21px;
+  background-color: #766357;
+  text-decoration: none;
+  color: #fff;
 }
 
-.search:active {
-  color: #857871;
-  background-color: #503e33;
-}
-
-.form {
-  margin: 0 280px;
-}
-
-input,
-label {
-  font-size: 14px;
-  font-weight: 700;
-}
-
-.date-begin,
-.date-finish {
+.modal-search-form {
+  position: relative;
+  top: 34px;
+  flex-wrap: wrap;
   margin: 0;
-  padding: 10px;
-  width: 328px;
+  padding: 53px 50px 54px 56px;
+  display: none;
+}
+
+.modal-search-form.on {
+  display: flex;
+}
+
+.modal-search-form label {
+  box-sizing: border-box;
+  width: 110px;
+  line-height: 36px;
+}
+label.date-in {
+  padding-top: 2px;
+  padding-left: 2px;
+}
+
+.kids {
+  padding-left: 57px;
+}
+
+.modal-search-form input {
+  box-sizing: border-box;
   background-color: #f2f2f2;
   border: none;
 }
 
-.date-begin:hover,
-.date-finish:hover {
+.modal-search-form input[type="text"] {
+  margin-bottom: 30px;
+  padding-left: 10px;
+  padding-right: 40px;
+  width: 344px;
+  height: 38px;
+  font-size: 14px;
+  color: #000;
+  margin-left: 6px;
+  line-height: 38px;
+}
+
+.modal-search-form input[type="text"]:hover,
+.modal-search-form input[type="text"]:hover + .icon-calendar {
   background-color: #ebebeb;
+  border: none;
 }
 
-.date-begin:focus,
-.date-finish:focus {
-  outline: none !important;
-  background-color: #ffffff;
+.modal-search-form input[type="text"]:focus,
+.modal-search-form input[type="text"]:focus + .icon-calendar {
+  background-color: #fff;
   border: 2px solid #e5e5e5;
+  outline: none;
 }
 
-.date-begin::placeholder,
-.date-finish::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+.modal-search-form input[type="text"]:focus {
+  padding-left: 13px;
+}
+
+.modal-search-form input[type="text"]:focus + .icon-calendar {
+  line-height: 33px;
+  border-left: none;
+  border-right: none;
+}
+
+.date-in,
+.date-out {
+  font-weight: 700;
+}
+
+.date-in::placeholder,
+.date-out::placeholder {
   text-transform: uppercase;
   color: #000000;
-  opacity: 1; /* Firefox */
+  opacity: 1;
 }
 
-.date-begin:-ms-input-placeholder,
-.date-finish:-ms-input-placeholder { /* Internet Explorer 10-11 */
+.date-in:-ms-input-placeholder,
+.date-out:-ms-input-placeholder {
   color: #000000;
   }
 
-.date-begin::-ms-input-placeholder,
-.date-finish::-ms-input-placeholder { /* Microsoft Edge */
+.date-in::-ms-input-placeholder,
+.date-out::-ms-input-placeholder {
   color: #000000;
 }
 
-.label-size {
-  margin-bottom: 30px;
+.modal-search-form input[type="number"] {
+  margin-bottom: 54px;
+  width: 125px;
+  height: 38px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #000;
+  text-align: center;
 }
 
-.check-in {
-  margin-right: 20px;
+.modal-search-form .icon-calendar,
+.adults-icon.icon-minus,
+.adults-icon.icon-plus,
+.kids-icon.icon-minus,
+.kids-icon.icon-plus {
+  display: block;
+  position: absolute;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 36px;
+  height: 36px;
+  color: #a9a9a9;
+  background-color: #f2f2f2;
+  text-align: center;
+  line-height: 36px;
+  cursor: pointer;
+  z-index: 2;
 }
 
-.check-out {
-  margin-right: 15px;
+.modal-search-form .icon-calendar {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  width: 65px;
+  height: 35px;
+  left: 443px;
+  text-align: right;
+  font-size: 22px;
 }
 
+button.calendar {
+  border: none;
+  background-color: transparent
+}
+
+.icon-calendar.date-in {
+  top: 55px;
+}
+
+.icon-calendar.date-out {
+  top: 123px;
+}
+
+.icon-minus,
+.icon-plus {
+  top: 191px;
+}
+
+.adults-icon.icon-minus {
+  left: 168px;
+}
+
+.adults-icon.icon-plus {
+  left: 243px;
+}
+
+.kids-icon.icon-minus{
+  left: 399px;
+}
+
+.kids-icon.icon-plus {
+  left: 474px;
+}
+
+input[name="adults"] {
+  padding-left: 15px;
+}
+
+input[name="kids"] {
+  margin-left: 12px;
+  padding-left: 12px;
+}
+
+.search-form-button {
+  box-sizing: border-box;
+  margin-bottom: 2px;
+  width: 456px;
+  height: 58px;
+  font-size: 21px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  line-height: 55px;
+  color: #fff;
+  background-color: #81b3d2;
+  border: none;
+}
+
+.search-form-button:hover {
+  background-color: #669ec0;
+}
+
+.search-form-button:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #5496bd;
+}
+
+/*
 .clients-number {
   display: flex;
   align-items: center;
@@ -343,6 +508,7 @@ label {
   color: #88b6d1;
   background-color: #5496bd;
 }
+*/
 
 /*-----------------------MAP-----------------------*/
 .map-block img {
