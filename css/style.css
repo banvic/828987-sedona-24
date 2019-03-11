@@ -178,8 +178,6 @@ body {
 .landscape {
   list-style: none;
   margin: 0;
-  width: 800px;
-  height: 260px;
 }
 
 /*-----------------------BOOKING-----------------------*/
@@ -205,23 +203,6 @@ h3.booking {
   margin: 0px;
   color: #333;
 }
-
-/*
-h3 {
-  margin: 0;
-  padding-top: 60px;
-  font-size: 30px;
-  text-align: center;
-}
-
-.enter-date {
-  margin: 40px 0 40px 0;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1.5;
-  text-align: center;
-}
-*/
 
 /*-----------------------MODAL-WINDOW-----------------------*/
 .search-form {
@@ -257,7 +238,7 @@ h3 {
   flex-wrap: wrap;
   margin: 0;
   padding: 53px 50px 54px 56px;
-  display: none;
+
 }
 
 .modal-search-form.on {
@@ -268,6 +249,7 @@ h3 {
   box-sizing: border-box;
   width: 110px;
   line-height: 36px;
+  padding-right
 }
 label.date-in {
   padding-top: 2px;
@@ -275,7 +257,7 @@ label.date-in {
 }
 
 .kids {
-  padding-left: 57px;
+  padding-left: 80px;
 }
 
 .modal-search-form input {
@@ -342,9 +324,11 @@ label.date-in {
 }
 
 .modal-search-form input[type="number"] {
+  margin-top: 2px;
+  margin-left: 50px;
   margin-bottom: 54px;
-  width: 125px;
-  height: 38px;
+  width: 60px;
+  height: 36px;
   font-size: 14px;
   font-weight: 700;
   color: #000;
@@ -399,10 +383,11 @@ button.calendar {
 .icon-minus,
 .icon-plus {
   top: 191px;
+  font-size: 24px;
 }
 
 .adults-icon.icon-minus {
-  left: 168px;
+  left: 174px;
 }
 
 .adults-icon.icon-plus {
@@ -410,11 +395,11 @@ button.calendar {
 }
 
 .kids-icon.icon-minus{
-  left: 399px;
+  left: 410px;
 }
 
 .kids-icon.icon-plus {
-  left: 474px;
+  left: 482px;
 }
 
 input[name="adults"] {
@@ -428,8 +413,9 @@ input[name="kids"] {
 
 .search-form-button {
   box-sizing: border-box;
+  padding: 0;
   margin-bottom: 2px;
-  width: 456px;
+  width: 460px;
   height: 58px;
   font-size: 21px;
   text-align: center;
@@ -449,66 +435,6 @@ input[name="kids"] {
   color: rgba(255, 255, 255, 0.3);
   background-color: #5496bd;
 }
-
-/*
-.clients-number {
-  display: flex;
-  align-items: center;
-}
-
-.adults {
-  margin-right: 45px;
-}
-
-.children {
-  margin-right: 35px;
-  margin-left: 70px;
-}
-
-.minus,
-.plus {
-  font-size: 21px;
-  font-weight: 700;
-  padding: 5px 13px;
-  border: none;
-  background-color: #f2f2f2;
-  color: #a9a9a9;
-}
-
-.quantity input {
-  padding: 10px;
-  width: 20px;
-  text-align: center;
-  border: none;
-  background-color: #f2f2f2;
-}
-
-.quantity input::placeholder {
-  color: #000000;
-  opacity: 1;
-}
-
-.input-submit {
-  padding: 25px 0;
-  width: 520px;
-  margin-top: 55px;
-  font-size: 21px;
-  font-weight: 700;
-  text-transform: uppercase;
-  border: none;
-  color: #ffffff;
-  background-color: #81b3d2;
-}
-
-.input-submit:hover {
-  background-color: #669ec0;
-}
-
-.input-submit:active {
-  color: #88b6d1;
-  background-color: #5496bd;
-}
-*/
 
 /*-----------------------MAP-----------------------*/
 .map-block img {
