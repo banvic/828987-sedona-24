@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=latin,cyrillic">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
@@ -26,9 +26,9 @@
             </svg>
           </a>
           <ul class="site-navigation">
-            <li class="travel-menu"><a href="info.html">Информация</a></li>
-            <li class="travel-menu"><a href="photo.html">Фото и видео</a></li>
-            <li class="travel-menu"><a href="map.html">Карта штата</a></li>
+            <li class="travel-menu"><a href="index.html#info">Информация</a></li>
+            <li class="travel-menu"><a href="index.html#photos">Фото и видео</a></li>
+            <li class="travel-menu"><a href="index.html#map">Карта штата</a></li>
             <li class="travel-menu"><a href="hotels.html" class="active">Гостиницы</a></li>
           </ul>
         </nav>
@@ -124,7 +124,7 @@
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17"><path fill="#81B3D2" d="M9.002 0l2.126 6.494h6.877l-5.564 4.012L14.566 17l-5.564-4.013L3.438 17l2.126-6.494L0 6.494h6.878z"/></svg>
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17"><path fill="#81B3D2" d="M9.002 0l2.126 6.494h6.877l-5.564 4.012L14.566 17l-5.564-4.013L3.438 17l2.126-6.494L0 6.494h6.878z"/></svg>
               </span>
-              <p class="rating">Рейтинг: 9,2</p>
+              <p class="rating">Рейтинг: 8,5</p>
             </div>
           </div>
 
@@ -147,7 +147,7 @@
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17"><path fill="#81B3D2" d="M9.002 0l2.126 6.494h6.877l-5.564 4.012L14.566 17l-5.564-4.013L3.438 17l2.126-6.494L0 6.494h6.878z"/></svg>
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17"><path fill="#81B3D2" d="M9.002 0l2.126 6.494h6.877l-5.564 4.012L14.566 17l-5.564-4.013L3.438 17l2.126-6.494L0 6.494h6.878z"/></svg>
               </span>
-              <p class="rating">Рейтинг: 9,2</p>
+              <p class="rating">Рейтинг: 8,9</p>
             </div>
           </div>
 
@@ -176,7 +176,7 @@
       </main>
 
       <footer class="main-footer">
-        <a href="#" id="visit-sedona" class="footer-contacts">#visitsedona</a>
+        <a href="map.html" id="visit-sedona" class="footer-contacts contacts-map">#visitsedona</a>
         <div class="footer-social">
           <ul>
             <li><a class="social-button" href="#">
@@ -197,6 +197,14 @@
           </a>
         </p>
       </footer>
+
+      <section class="modal modal-map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d52385.13566747379!2d-111.8301579!3d34.8544438!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2s!4v1552324465747" width="766" height="560" frameborder="0" style="border:0" allowfullscreen></iframe>
+        <button class="modal-close" type="button"></button>
+      </section>
     </div>
+
+    <script type="text/javascript" src="./js/map-popup.js"></script>
+
   </body>
 </html>

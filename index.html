@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=latin,cyrillic">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
@@ -25,9 +25,9 @@
             </svg>
           </a>
           <ul class="site-navigation">
-            <li class="travel-menu"><a href="info.html">Информация</a></li>
-            <li class="travel-menu"><a href="photo.html">Фото и видео</a></li>
-            <li class="travel-menu"><a href="map.html">Карта штата</a></li>
+            <li class="travel-menu"><a href="#info">Информация</a></li>
+            <li class="travel-menu"><a href="#photos">Фото и видео</a></li>
+            <li class="travel-menu"><a href="#map">Карта штата</a></li>
             <li class="travel-menu"><a href="hotels.html">Гостиницы</a></li>
           </ul>
         </nav>
@@ -39,12 +39,12 @@
           <img src="img/welcome.png" width="459" alt="Вас приветствует Седона">
           <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="59" preserveAspectRatio="none" viewBox="0 0 1200 59"><path d="M0 57V0l250 24V0l350 57L950 0v24l250-24v57H0z" fill="#fff"/></svg>
         </section>
-        <section class="main-title">
+        <section class="main-title" id="info">
           <h2 class="title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
           <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
         </section>
         <section class="visit-reasons">
-          <ul class="reasons">
+          <ul class="reasons" id="photos">
             <li class="content-reason reason-number">
               <h2 class="title-reason">Настоящий городок</h2>
               <p class="priority">— №1 —</p>
@@ -99,12 +99,14 @@
             </li>
           </ul>
         </section>
-        <section class="booking-container">
+        <section id="map" class="booking-container">
           <h3 class="booking">Заинтересовались?</h3>
           <p class="booking-paragraph">Укажите предполагаемые даты поездки,
             <br>и мы покажем Вам лучшие предложения гостиниц в Седоне</p>
           <div class="search-form">
-            <div class="form-title"><a href="search.html">Поиск гостиницы в Седоне</a></div>
+            <button class="form-title">
+              <h3 class="title-search-form">Поиск гостиницы в Седоне</h3>
+            </button>
             <form action="https://echo.htmlacademy.ru" method="post">
               <div class="modal-search-form">
                 <label class="date-in" for="date-in">Дата заезда:</label>
@@ -141,7 +143,7 @@
       </main>
 
       <footer class="main-footer">
-        <a href="#" id="visit-sedona" class="footer-contacts">#visitsedona</a>
+        <a href="map.html" id="visit-sedona" class="footer-contacts contacts-map">#visitsedona</a>
         <div class="footer-social">
           <ul>
             <li><a class="social-button" href="#">
@@ -162,6 +164,14 @@
           </a>
         </p>
       </footer>
+
+      <section class="modal modal-map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d52385.13566747379!2d-111.8301579!3d34.8544438!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2s!4v1552324465747" width="766" height="560" allowfullscreen></iframe>
+        <button class="modal-close" type="button"></button>
+      </section>
     </div>
+
+    <script type="text/javascript" src="./js/popup.js"></script>
+
   </body>
 </html>
