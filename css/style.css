@@ -560,7 +560,7 @@ input[name="kids"] {
 
 .modal-map iframe {
   position: relative;
-  border: none;
+  border: 0;
 }
 
 /*----------------FILTER-HOTELS----------------*/
