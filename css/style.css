@@ -504,6 +504,7 @@ input[name="kids"] {
   background-position: 0 0;
   background-repeat: repeat;
   box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
+  z-index: 3
 }
 
 .modal-show {
@@ -547,7 +548,7 @@ input[name="kids"] {
 }
 
 .modal-map {
-  top: 50%;
+  bottom: 16%;
   left: 50%;
   width: 766px;
   height: 560px;
@@ -559,7 +560,6 @@ input[name="kids"] {
 
 .modal-map iframe {
   position: relative;
-  z-index: 2;
   border: none;
 }
 
@@ -607,7 +607,7 @@ input[name="kids"] {
   width: 25px;
   display:inline-block;
   padding: 0;
-  box-shadow: inset 0 0 1px 2px black;
+  box-shadow: inset 0 0 1px 2px white;
 }
 
 .accomodation input:checked {
@@ -615,7 +615,7 @@ input[name="kids"] {
   width: 25px;
   display:inline-block;
   padding: 0;
-  box-shadow: inset 0 0 1px 2px black;
+  box-shadow: inset 0 0 1px 2px white;
   }
 
 /*----------------FILTER-RANGE----------------*/
