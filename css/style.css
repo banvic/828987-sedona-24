@@ -87,7 +87,7 @@ body {
 }
 
 .site-navigation li:nth-of-type(2) {
-  padding-right: 408px;
+  padding-right: 400px;
 }
 
 .site-navigation li:last-child {
@@ -153,7 +153,7 @@ body {
   font-weight: 700;
   padding-left: 300px;
   padding-right: 300px;
-  margin-top: -2px;
+  margin-top: -3px;
   margin-bottom: 40px;
   padding-top: 65px;
   text-align: center;
@@ -242,6 +242,7 @@ h3.booking {
 }
 
 .form-title {
+  padding: 20px 0;
   border: 0;
   width: 100%;
   background-color: #766357;
@@ -269,7 +270,7 @@ h3.booking {
 .title-search-form {
   font-size: 21px;
   text-transform: uppercase;
-  padding: 13px 110px;
+  padding: 35px 110px;
   color: #fff;
 }
 
@@ -422,7 +423,20 @@ label.date-in {
 
 button.calendar {
   border: none;
-  background-color: transparent
+  background: none;
+}
+
+.calendar svg:hover {
+  fill: #000000;
+}
+
+button.calendar:active {
+  outline: none;
+  border: none;
+}
+
+.calendar svg:active {
+  fill: #81b3d2;
 }
 
 .icon-calendar.date-in {
@@ -583,6 +597,7 @@ input[name="kids"] {
 .filter legend {
   font-size: 16px;
   padding-top: 30px;
+  padding-bottom: 5px;
 }
 
 .all-inclusive {
@@ -597,26 +612,35 @@ input[name="kids"] {
   font-weight: 400;
 }
 
-.accomodation label {
+.accomodation input[type="checkbox"] {
+  
+  display: none;
+}
+
+.accomodation input[type="checkbox"] + label::before {
+  content: "";
+  display: inline-block;
+  
+  background-image: url("../img/checkbox-off.png");
+  background-repeat: no-repeat;
+  width: 23px;
+  height: 23px;
+}
+
+.accomodation input[type="checkbox"]:checked + label::before {
+  content: "";
+  display: inline-block;
+  background-image: url("../img/checkbox-on.png");
+  background-repeat: no-repeat;
+  width: 27px;
+  height: 23px;
+}
+
+.accomodation label::before {
   font-weight: 400;
+  margin-bottom: -5px;
+  padding-left: 15px;
 }
-
-.accomodation input {
-  margin-right: 20px;
-  height: 25px;
-  width: 25px;
-  display:inline-block;
-  padding: 0;
-  box-shadow: inset 0 0 1px 2px white;
-}
-
-.accomodation input:checked {
-  height: 25px;
-  width: 25px;
-  display:inline-block;
-  padding: 0;
-  box-shadow: inset 0 0 1px 2px white;
-  }
 
 /*----------------FILTER-RANGE----------------*/
 .filter-range {
